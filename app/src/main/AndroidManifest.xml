@@ -1,0 +1,271 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tanwan.sslmly.lianyun">
+
+<!--    &lt;!&ndash; RaStarSDK 权限 start &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.INTERNET"/>-->
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+<!--    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
+<!--    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+<!--    &lt;!&ndash; 5.6.0新增权限 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />-->
+<!--    <uses-permission android:name="android.permission.VIBRATE"/>-->
+<!--    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />-->
+<!--    &lt;!&ndash;asus permisstion&ndash;&gt;-->
+<!--    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />-->
+
+<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+<!--    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>-->
+<!--    &lt;!&ndash; RaStarSDK 权限 end &ndash;&gt;-->
+
+<!--    &lt;!&ndash; 游戏本身权限 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK" />-->
+<!--    <uses-permission android:name="android.permission.RECORD_AUDIO"/>-->
+<!--    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>-->
+<!--	-->
+<!--    <application-->
+<!--        android:name="com.starjoys.module.SjoysApplication"-->
+<!--		android:usesCleartextTraffic="true"-->
+<!--        android:allowBackup="true"-->
+<!--        android:icon="@mipmap/ic_launcher"-->
+<!--        android:label="@string/app_name"-->
+<!--		android:theme="@style/Theme.AppCompat.NoActionBar">-->
+<!--        <activity-->
+<!--            android:name="com.gaodashang.xiaoqiang.com.tanwan.sslmly.lianyun.MainActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustPan"-->
+<!--            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+<!--            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"-->
+<!--            android:label="@string/app_name" >-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        &lt;!&ndash;SDK plugin start&ndash;&gt;-->
+<!--        &lt;!&ndash; RaStarSDK 组件 start &ndash;&gt;-->
+<!--        &lt;!&ndash; SDK支付Activity &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.starjoys.module.pay.RSDKPayActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"-->
+<!--            android:screenOrientation="behind"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />-->
+<!--        ​-->
+<!--        &lt;!&ndash; SDK Web 页面&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.starjoys.module.common.CommonWebActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+
+<!--        &lt;!&ndash;SDK v5.3.0新增&ndash;&gt;-->
+<!--        &lt;!&ndash;android:authorities="包名.rastar.fileprovider"&ndash;&gt;-->
+<!--        <provider-->
+<!--            android:name="com.starjoys.plugin.update.RastarInstallFileProvider"-->
+<!--            android:authorities="${applicationId}.rastar.fileprovider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/rsdk_file_paths" />-->
+<!--        </provider>-->
+<!--&lt;!&ndash;        <provider&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name="com.starjoys.plugin.update.RastarInstallFileProvider"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:authorities="com.starjoys.sdk.com.gaodashang.xiaoqiang.com.tanwan.sslmly.lianyun.demo.rastar.fileprovider"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:exported="false"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:grantUriPermissions="true">&ndash;&gt;-->
+<!--&lt;!&ndash;            <meta-data&ndash;&gt;-->
+<!--&lt;!&ndash;                android:name="android.support.FILE_PROVIDER_PATHS"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:resource="@xml/rsdk_file_paths" />&ndash;&gt;-->
+<!--&lt;!&ndash;        </provider>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;SDK v5.7.3新增&ndash;&gt;-->
+<!--        &lt;!&ndash;android:host="包名"&ndash;&gt;-->
+<!--        <activity android:name="com.starjoys.plugin.activity.SchemeUrlActivity"-->
+<!--            android:screenOrientation="behind"-->
+<!--            android:windowSoftInputMode="adjustResize"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">-->
+<!--            <intent-filter >-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.BROWSABLE"/>-->
+<!--                <data-->
+<!--                    android:host="${applicationId}"-->
+<!--                    android:scheme="rastar"-->
+<!--                    android:path="/launch/app"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        &lt;!&ndash; RaStarSDK组件 end &ndash;&gt;-->
+
+<!--        &lt;!&ndash;针对 Android 9 第三方登录时拉起手Q 闪退的处理&ndash;&gt;-->
+<!--        <uses-library-->
+<!--            android:name="org.apache.http.legacy"-->
+<!--            android:required="false" />-->
+
+<!--        &lt;!&ndash; 分区存储适配 Android 11设备分享&ndash;&gt;-->
+<!--        <provider-->
+<!--            android:name="android.support.v4.content.FileProvider"-->
+<!--            android:authorities="${applicationId}.fileprovider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true" >-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/rsdk_share_filepaths" />-->
+<!--        </provider>-->
+
+<!--        &lt;!&ndash;友盟QQ登录分享&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="com.tencent.tauth.AuthActivity"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:noHistory="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--                // tencent+QQappid-->
+<!--                <data android:scheme="tencent101523897" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name="com.tencent.connect.common.AssistActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+<!--        ​-->
+<!--        &lt;!&ndash;友盟微信登录分享&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="${applicationId}.wxapi.WXEntryActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:exported="true"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+<!--        &lt;!&ndash;SDK plugin end&ndash;&gt;-->
+
+<!--        <uses-library-->
+<!--            android:name="org.apache.http.legacy"-->
+<!--            android:required="false"/>-->
+
+
+<!--    </application>-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!--    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+        <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+        <uses-permission android:name="android.permission.VIBRATE"/>
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+        <!--asus permisstion-->
+        <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+
+<!--    <supports-screens-->
+<!--        android:anyDensity="true"-->
+<!--        android:largeScreens="true"-->
+<!--        android:normalScreens="true"-->
+<!--        android:resizeable="true"-->
+<!--        android:smallScreens="true" />-->
+<!--    <application-->
+<!--        android:name="com.starjoys.module.SjoysApplication"-->
+<!--        android:usesCleartextTraffic="true"-->
+<!--        android:allowBackup="true"-->
+<!--        android:icon="@mipmap/ic_launcher"-->
+<!--        android:label="@string/app_name"-->
+<!--        android:theme="@style/Theme.AppCompat.NoActionBar">-->
+<!--    <activity-->
+<!--        android:name="com.gaodashang.xiaoqiang.com.tanwan.sslmly.lianyun.MainActivity"-->
+<!--        android:screenOrientation="portrait"-->
+<!--        android:windowSoftInputMode="stateHidden|adjustPan"-->
+<!--        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+<!--        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"-->
+<!--        android:label="@string/app_name" >-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
+<!--            <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--        </intent-filter>-->
+<!--    </activity>-->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+    <application
+        android:name="com.tanwan.sslmly.lianyun.TanwanApplication"
+            android:usesCleartextTraffic="true"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name">
+
+        <activity
+            android:name="com.tanwan.sslmly.lianyun.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/AppTheme.StartingWindowTheme"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="SHOW_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="SHOW_TOAST"
+            android:value="false" />
+        <meta-data
+            android:name="design_version_code"
+            android:value="100" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+<!--        <meta-data-->
+<!--            android:name="notch.config"-->
+<!--            android:value="portrait|landscape"/>-->
+
+<!--        &lt;!&ndash; OPPO &ndash;&gt;-->
+
+<!--        &lt;!&ndash; 小米适配 &ndash;&gt;-->
+
+<!--        &lt;!&ndash; 允许绘制到华为刘海屏机型的刘海区域 &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="android.notch_support"-->
+<!--            android:value="true" />-->
+
+        <meta-data
+            android:name="TANWAN_GAME_ID"
+            android:value="8854" />
+        <meta-data
+            android:name="TANWAN_APP_KEY"
+            android:value="yWpx3hWQHFhSnTCj#8854#6KuRKuaAjLJ5sYRy" />
+<!--        <meta-data-->
+<!--            android:name="TANWAN_GAME_CHANNEL_ID"-->
+<!--            android:value="9" />-->
+
+        <!-- 是否开启广告接口 -->
+<!--        <meta-data-->
+<!--            android:name="IMPLEMENTATION_AD"-->
+<!--            android:value="false" />-->
+
+<!--        <meta-data-->
+<!--            android:name="SDK_GAME_ID"-->
+<!--            android:value="1000000" />-->
+<!--        <meta-data-->
+<!--            android:name="SDK_APP_KEY"-->
+<!--            android:value="8a706e870f7afd73411b23e626440365" />-->
+    </application>
+
+</manifest>
